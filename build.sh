@@ -23,3 +23,5 @@ cd qemu-JZ
 make CFLAGS="-w"
 cd ..
 
+# Build mknandflash
+make -C ./np_tools/mknandflash
