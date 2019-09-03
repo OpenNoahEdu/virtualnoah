@@ -3,7 +3,7 @@
 	url = https://github.com/OpenNoahEdu/ingenic-jz-crosstools-src.git
 [submodule "unpkg"]
 	path = unpkg
-	url = https://github.com/OpenNoahEdu/unpkg.git
+	url = https://github.com/OpenNoahEdu/np_unpkg.git
 [submodule "qemu-JZ"]
 	path = qemu-JZ
 	url = https://github.com/OpenNoahEdu/qemu-JZ.git
