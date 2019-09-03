@@ -1,0 +1,3 @@
+[submodule "crosstools"]
+	path = crosstools
+	url = https://github.com/OpenNoahEdu/ingenic-jz-crosstools-src.git
