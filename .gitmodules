@@ -7,3 +7,6 @@
 [submodule "qemu-JZ"]
 	path = qemu-JZ
 	url = https://github.com/OpenNoahEdu/qemu-JZ.git
+[submodule "np_tools"]
+	path = np_tools
+	url = https://github.com/OpenNoahEdu/np_tools.git
