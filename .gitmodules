@@ -4,3 +4,6 @@
 [submodule "unpkg"]
 	path = unpkg
 	url = https://github.com/OpenNoahEdu/unpkg.git
+[submodule "qemu-JZ"]
+	path = qemu-JZ
+	url = https://github.com/OpenNoahEdu/qemu-JZ.git
