@@ -25,3 +25,8 @@ cd ..
 
 # Build mknandflash
 make -C ./np_tools/mknandflash
+
+cd u-boot
+make pavo_nand_config
+make
+cd ..
