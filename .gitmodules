@@ -13,3 +13,6 @@
 [submodule "u-boot"]
 	path = u-boot
 	url = https://github.com/OpenNoahEdu/ingenic-u-boot.git
+[submodule "linux"]
+	path = linux
+	url = https://github.com/OpenNoahEdu/ingenic-linux.git
