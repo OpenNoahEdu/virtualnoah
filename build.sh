@@ -30,3 +30,8 @@ cd u-boot
 make pavo_nand_config
 make
 cd ..
+
+cd linux
+make pavo_defconfig
+make uImage
+cd ..
