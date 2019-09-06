@@ -5,18 +5,8 @@
 ### Debian
 
 ```
-sudo apt install make gcc g++
-
-# qemu
-sudo apt install zlib1g-dev libsdl1.2-dev
-
+sudo apt install make gcc g++ zlib1g-dev libsdl1.2-dev libgcc-8-dev-mipsel-cross u-boot-tools unrar
 sudo apt build-dep gcc
-
-# uboot
-sudo apt install libgcc-8-dev-mipsel-cross
-
-# kernel
-sudo apt install u-boot-tools
 ```
 
 ## Build
