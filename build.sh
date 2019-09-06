@@ -1,9 +1,27 @@
 #!/bin/sh
 
+# Build qemu-jz
+cd qemu-JZ
+./configure --target-list=mipsel-softmmu
+make CFLAGS="-w"
+cd ..
+
 # Build cross tools
 cd crosstools
 ./build-mips-cross-tools-no-glibc.sh
 export PATH=$PATH:~/opt/mipseltools-gcc412/bin/
+cd ..
+
+# Build u-boot
+cd u-boot
+make pavo_nand_config
+make
+cd ..
+
+# Build Kernel
+cd linux
+make pavo_defconfig
+make uImage
 cd ..
 
 # Build unpkg
@@ -17,21 +35,5 @@ unrar x NP1100升级程序V3.3.73.rar
 ../unpkg/src/unpkg upgrade.bin
 cd ..
 
-# Build qemu-jz
-cd qemu-JZ
-./configure --target-list=mipsel-softmmu
-make CFLAGS="-w"
-cd ..
-
 # Build mknandflash
 make -C ./np_tools/mknandflash
-
-cd u-boot
-make pavo_nand_config
-make
-cd ..
-
-cd linux
-make pavo_defconfig
-make uImage
-cd ..
