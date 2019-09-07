@@ -38,56 +38,68 @@ cd ..
 # Build mknandflash
 make -C ./np_tools/mknandflash
 
-# Make np1100.bin
-./np_tools/mknandflash/mknandflash np1100.bin \
+# Make nandflash.bin
+./np_tools/mknandflash/mknandflash nandflash.bin
+./np_tools/mknandflash/mknandflash nandflash.bin \
 --uboot \
 	u-boot/u-boot-nand.bin \
 	0x00000000 \
 	0x00200000 \
-	0 \
+	0
+./np_tools/mknandflash/mknandflash nandflash.bin \
 --serial \
 	assets/serial.img \
 	0x00200000 \
 	0x00400000 \
-	0 \
+	0
+./np_tools/mknandflash/mknandflash nandflash.bin \
 --uimage \
 	linux/arch/mips/boot/uImage \
 	0x00400000 \
 	0x00600000 \
-	0 \
+	0
+./np_tools/mknandflash/mknandflash nandflash.bin \
 --rootfs \
 	upgrade/rootfs.yaffs2 \
 	0x00600000 \
 	0x01800000 \
 	1 \
-	0 \
+	0
+./np_tools/mknandflash/mknandflash nandflash.bin \
 --settings \
 	upgrade/Settings.yaffs2 \
 	0x01800000 \
 	0x02300000 \
 	1 \
-	0 \
+	0
+./np_tools/mknandflash/mknandflash nandflash.bin \
 --progfs \
 	upgrade/ProgFS.yaffs2 \
 	0x02300000 \
 	0x0cd00000 \
 	1 \
-	0 \
+	0
+./np_tools/mknandflash/mknandflash nandflash.bin \
 --datafs \
 	upgrade/DataFS.yaffs2 \
 	0x0cd00000 \
 	0x15900000 \
 	1 \
-	0 \
+	0
+./np_tools/mknandflash/mknandflash nandflash.bin \
 --usrfs \
 	upgrade/UsrFS.yaffs2 \
 	0x15900000 \
 	0x16500000 \
 	1 \
-	0 \
+	0
+./np_tools/mknandflash/mknandflash nandflash.bin \
 --usrdisk \
 	upgrade/UsrDisk.yaffs2 \
 	0x16500000 \
 	0x40000000 \
 	1 \
 	0 
+
+# Run
+./qemu-JZ/mipsel-softmmu/qemu-system-mipsel -M pavo -cpu jz4740 -mtdblock ./np1100.bin -show-cursor
