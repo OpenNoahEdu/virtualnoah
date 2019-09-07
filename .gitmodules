@@ -15,4 +15,4 @@
 	url = https://github.com/OpenNoahEdu/np_u-boot.git
 [submodule "linux"]
 	path = linux
-	url = https://github.com/OpenNoahEdu/ingenic-linux.git
+	url = https://github.com/OpenNoahEdu/np_linux.git
