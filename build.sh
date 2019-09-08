@@ -19,8 +19,8 @@ make
 cd ..
 
 # Build Kernel
+cp assets/kernel_config linux/.config
 cd linux
-make pavo_defconfig
 make uImage
 cd ..
 
