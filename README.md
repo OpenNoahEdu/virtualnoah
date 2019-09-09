@@ -14,3 +14,7 @@ sudo apt build-dep gcc
 	git clone --depth 1 --recursive --shallow-submodules https://github.com/OpenNoahEdu/virtualnoah.git -b new
 	cd virtualnoah
 	./build.sh
+
+## Run
+
+	./qemu-JZ/mipsel-softmmu/qemu-system-mipsel -show-cursor -serial pty -M pavo -cpu jz4740 -mtdblock ./nandflash.bin

@@ -100,6 +100,3 @@ make -C ./np_tools/mknandflash
 	0x40000000 \
 	1 \
 	0 
-
-# Run
-./qemu-JZ/mipsel-softmmu/qemu-system-mipsel -M pavo -cpu jz4740 -mtdblock ./nandflash.bin -show-cursor
